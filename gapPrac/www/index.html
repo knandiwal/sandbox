@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>PhoneGap Practice</title>
+    <head>
+        <title>PhoneGap Practice</title>
 
-    <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
-    <script type="text/javascript" charset="utf-8">
-    document.addEventListener("deviceready", onDeviceReady, false);
+        <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+        <script type="text/javascript" charset="utf-8">
+        document.addEventListener("deviceready", onDeviceReady, false);
 
-    function onDeviceReady() {
-        document.addEventListener("online", isOnline, false);
-        document.addEventListener("offline", isOffline, false);
-        document.addEventListener("pause", onPause, false);
-        document.addEventListener("resume", onResume, false);
-        document.addEventListener("backbutton", onBackButton, false);
-        document.addEventListener("menubutton", onMenuButton, false);
-        document.addEventListener("searchbutton", onSearch, false);
-    }
-        function isOnline() {
-            alert("Device is connected to internet");
+        function onDeviceReady() {
+            document.addEventListener("online", isOnline, false);
+            document.addEventListener("offline", isOffline, false);
+            document.addEventListener("pause", onPause, false);
+            document.addEventListener("resume", onResume, false);
+            document.addEventListener("backbutton", onBackButton, false);
+            document.addEventListener("menubutton", onMenuButton, false);
+            document.addEventListener("searchbutton", onSearch, false);
         }
+            function isOnline() {
+                alert("Device is connected to internet");
+            }
 
-        function isOffline() {
-            alert("Device is not connected to the internet");
-        }
+            function isOffline() {
+                alert("Device is not connected to the internet");
+            }
 
-        function onPause() {
-            alert("Paused");
-        }
+            function onPause() {
+                alert("Paused");
+            }
 
-        function onResume() {
-            alert("Resumed");
-        }
+            function onResume() {
+                alert("Resumed");
+            }
 
-        function onBackButton() {
-            alert("Pushed back button");
-        }
+            function onBackButton() {
+                alert("Pushed back button");
+            }
 
-        function onMenuButton() {
-            alert("Pressed menu button");
-        }
+            function onMenuButton() {
+                alert("Pressed menu button");
+            }
 
-        function onSearchButton() {
-            alert("Pressed search button");
-        }
-    </script>
-</head>
-<body>
+            function onSearchButton() {
+                alert("Pressed search button");
+            }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
