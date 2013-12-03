@@ -5,7 +5,11 @@
 
         <script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
         <script type="text/javascript" charset="utf-8">
-        document.addEventListener("deviceready", onDeviceReady, false);
+
+        function onLoad() {
+            document.addEventListener("deviceready", onDeviceReady, false);
+        }
+
 
         function onDeviceReady() {
             document.addEventListener("online", isOnline, false);
@@ -15,6 +19,14 @@
             document.addEventListener("backbutton", onBackButton, false);
             document.addEventListener("menubutton", onMenuButton, false);
             document.addEventListener("searchbutton", onSearch, false);
+
+            var myDiv = document.getElementById('props');
+
+            myDiv.innerHTML =   'Device Name: '     + device.name     + '<br />' +
+                                'Device PhoneGap: ' + device.phonegap + '<br />' +
+                                'Device Platform: ' + device.Platform + '<br />' +
+                                'Device UUID: '     + device.uuid     + '<br />' +
+                                'Device Version: '  + device.version  + '<br />';
         }
             function isOnline() {
                 alert("Device is connected to internet");
@@ -45,6 +57,7 @@
             }
         </script>
     </head>
-    <body>
+    <body onload="onLoad()">
+        <p id="props">Loading device properties...</p>
     </body>
 </html>
