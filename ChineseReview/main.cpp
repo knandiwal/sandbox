@@ -2,7 +2,7 @@
 #include <string>
 #include <vector>
 
-void tabCout(std::string);
+void tabCout(std::string string);
 
 class Vocabulary {
 public:
